@@ -2,11 +2,13 @@ class Solution {
     public int maximumWealth(int[][] accounts) {
         int maxWealth = -1;
         int rowWealth;
-        for (int row = 0; row < accounts.length; row++) {
+        // for each row add the customer's wealth
+        for (int[] row : accounts) {
             rowWealth = 0;
-            for (int col = 0; col < accounts[row].length; col++) {
-                rowWealth += accounts[row][col];
+            for (int money : row) {
+                rowWealth += money;
             }
+            // compare with the max wealth and assign maxwealth if conditions met
             if (maxWealth < rowWealth)
                 maxWealth = rowWealth;
         }
