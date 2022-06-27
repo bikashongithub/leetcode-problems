@@ -6,6 +6,7 @@ class Solution {
             nums[i] = square;
         }
 
+        // sorting the resulted array
         int n = nums.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
