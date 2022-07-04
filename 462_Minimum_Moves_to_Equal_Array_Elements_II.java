@@ -18,5 +18,32 @@ class Solution {
         }
         return minMoves;
 
+        /*
+         * TLE solution
+         * int count = 0;
+         * Set<Integer> uniqueSet = new HashSet<>();
+         * while (uniqueSet.size() != 1) {
+         * for (int i : nums) {
+         * uniqueSet.add(i);
+         * }
+         * int max = 0;
+         * for (int i = 0; i < nums.length - 1; i++) {
+         * if (nums[max] < nums[i]) {
+         * max = i;
+         * }
+         * }
+         * for (int i = 0; i < max; i++) {
+         * nums[i] += 1;
+         *
+         * }
+         * for (int i = max + 1; i < nums.length; i++) {
+         * nums[i] += 1;
+         *
+         * }
+         * count++;
+         * }
+         * return count;
+         */
     }
+
 }
